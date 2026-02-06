@@ -1,42 +1,60 @@
 # Zeeds Reviews
 
-Welcome to the Zeeds Reviews project! This repository is dedicated to providing a platform for users to share their reviews and experiences in a dynamic and engaging manner.
+## Tech Stack
+- **Frontend:** React, Redux
+- **Backend:** Node.js, Express
+- **Database:** MongoDB
+- **Testing:** Jest, Mocha
+
+## File Structure
+```
+├── client
+│   ├── public
+│   └── src
+│       ├── components
+│       ├── pages
+│       └── redux
+├── server
+│   ├── config
+│   ├── controllers
+│   ├── models
+│   └── routes
+├── .gitignore
+├── README.md
+└── package.json
+```
 
 ## Features
-- User authentication and profiles
-- Review submission for various products and services
-- Rating system for each review
-- Commenting mechanism for discussions
-- Search and filter options for reviews
+- User authentication and authorization
+- Review posting and editing
+- Searching and filtering of reviews
+- User profiles and dashboards
 
-## Getting Started
-To get a local copy up and running follow these simple steps:
-
-1. Clone the repo
+## Setup Instructions
+1. Clone the repository:
    ```bash
    git clone https://github.com/zeedsreviews/zeedsreviews.git
    ```
-2. Install the necessary packages
+2. Navigate into the project directory:
    ```bash
-   npm install
+   cd zeedsreviews
    ```
-3. Start the server
+3. Install dependencies for both client and server:
    ```bash
-   npm start
+   cd client && npm install && cd ../server && npm install
+   ```
+4. Run the client and server:
+   ```bash
+   cd client && npm start
+   ```
+   In another terminal:
+   ```bash
+   cd server && npm start
    ```
 
-## Contributing
-Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated!**
-
-1. Fork the project
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a pull request
-
-## License
-Distributed under the MIT License. See `LICENSE` for more information.
-
-## Contact
-Your Name - your_email@example.com
-Project Link: [https://github.com/zeedsreviews/zeedsreviews](https://github.com/zeedsreviews/zeedsreviews)
+## API Documentation
+- **GET /api/reviews**: Retrieve all reviews
+- **POST /api/reviews**: Create a new review
+- **GET /api/reviews/:id**: Retrieve a review by ID
+- **PUT /api/reviews/:id**: Update a review by ID
+- **DELETE /api/reviews/:id**: Delete a review by ID
